@@ -5,7 +5,6 @@ import createError from 'http-errors';
 import commonMiddleware from '../lib/commonMiddleware';
 import createAuctionSchema from '../lib/schemas/createAuctionSchema';
 
-
 const dynamodb = new AWS.DynamoDB.DocumentClient();
 
 async function createAuction(event, context) {
