@@ -1,4 +1,5 @@
 import middy from '@middy/core';
+import cors from '@middy/http-cors'
 import httpErrorHandler from '@middy/http-error-handler';
 import validator from '@middy/validator';
 import createError from 'http-errors';
@@ -45,4 +46,5 @@ export const handler = middy(uploadAuctionPicture)
         strict: false,
       },
     })
-  );
+  )
+  .use(cors());
